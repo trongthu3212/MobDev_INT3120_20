@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Donation</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="donation_fragment_label">Donation 1.5</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="welcome_label">Welcome Homer</string>
+    <string name="give_instruction">Please give generously</string>
+    <string name="donate_method_paypal">Paypal</string>
+    <string name="donate_method_direct">Direct</string>
+    <string name="donate_amount">Amount</string>
+    <string name="donate">Donate</string>
+    <string name="total_donate">Total so far:</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="enter_your_name">Enter your name</string>
+    <string name="enter_your_phone_number">Enter phone number</string>
+    <string name="option_cheese">Cheese</string>
+    <string name="option_twice_cheese">2 x Cheese</string>
+    <string name="option_none">None</string>
+    <string name="option_square">Square</string>
+    <string name="option_round">Round</string>
+    <string name="option_pepperoni">Pepperoni</string>
+    <string name="option_mushroom">Mushroom</string>
+    <string name="option_veggies">Veggies</string>
+    <string name="your_ordering">Your ordering:</string>
+</resources>

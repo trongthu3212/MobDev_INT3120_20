@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EssentialDevelopingAndroidFragment">
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/enter_your_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/et_phone_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/enter_your_phone_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_name" />
+
+    <RadioButton
+        android:id="@+id/rb_cheese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/option_cheese"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_phone_number" />
+
+    <RadioButton
+        android:id="@+id/rb_twice_cheese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/option_twice_cheese"
+        app:layout_constraintStart_toEndOf="@id/rb_cheese"
+        app:layout_constraintTop_toBottomOf="@id/et_phone_number" />
+
+    <RadioButton
+        android:id="@+id/rb_none"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/option_none"
+        app:layout_constraintStart_toEndOf="@id/rb_twice_cheese"
+        app:layout_constraintTop_toBottomOf="@id/et_phone_number" />
+
+    <RadioButton
+        android:id="@+id/rb_square"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/option_square"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rb_cheese" />
+
+    <RadioButton
+        android:id="@+id/rb_round"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/option_round"
+        app:layout_constraintStart_toEndOf="@id/rb_square"
+        app:layout_constraintTop_toBottomOf="@id/rb_cheese" />
+
+    <CheckBox
+        android:id="@+id/cb_pepperoni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/option_pepperoni"
+        app:layout_constraintTop_toBottomOf="@id/rb_square" />
+
+    <CheckBox
+        android:id="@+id/cb_mushroom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/option_mushroom"
+        app:layout_constraintStart_toEndOf="@id/cb_pepperoni"
+        app:layout_constraintTop_toBottomOf="@id/rb_square" />
+
+    <CheckBox
+        android:id="@+id/cb_veggies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/option_veggies"
+        app:layout_constraintStart_toEndOf="@id/cb_mushroom"
+        app:layout_constraintTop_toBottomOf="@id/rb_square" />
+
+    <TextView
+        android:id="@+id/tv_your_ordering"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/your_ordering"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/cb_pepperoni" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_your_ordering" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
