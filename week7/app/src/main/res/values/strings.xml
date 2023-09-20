@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next activity</string>
+    <string name="previous">Previous activity</string>
+    <string name="back">Back</string>
+
+    <string name="hello_first_fragment">Main activity!</string>
+    <string name="hello_second_fragment">Next activity!</string>
+    <string name="title_activity_next">NextActivity</string>
+
+    <string name="full_name">Full name:</string>
+    <string name="send_message_greeting">Send message to greeting activity</string>
+    <string name="feedback_from_greeting">Feedback from greeting activity:</string>
+    <string name="feedback_empty">((Feedback))</string>
+    <string name="message_sent_from">Message sent from MainActivity:</string>
+    <string name="message_empty">((Message))</string>
+    <string name="hello_msg">Hello, please say hello to me</string>
+</resources>

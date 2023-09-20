@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="item2">Item2</string>
+    <string name="item3">Item3</string>
+    <string name="item4">Item4</string>
+    <string name="item6">Item6</string>
+    <string name="item2msg">This is a message</string>
+    <string name="item3msg">This is a message 2</string>
+    <string name="item6d1">Item6.1</string>
+    <string name="item6d2">Item6.2</string>
+    <string name="item7">Item 7</string>
+
+    <string name="context_button_text">Long press me</string>
+    <string name="context_menu">Context menu</string>
+    <string name="switch_button">Popup menu example</string>
+
+    <string name="check_me">Check me</string>
+    <string name="popmenu_will_anchor">PopMenu will anchor on me</string>
+    <string name="popup_anchor">Popup anchor</string>
+</resources>
