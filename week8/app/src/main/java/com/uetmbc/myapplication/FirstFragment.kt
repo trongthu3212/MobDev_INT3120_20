@@ -1,7 +1,6 @@
 package com.uetmbc.myapplication
 
 import android.app.Activity
-import android.app.SearchManager
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -40,15 +39,6 @@ class FirstFragment : Fragment() {
         return binding.root
     }
 
-    private fun searchInternet()
-    {
-        var keyword = binding.etSearchKeyword.text;
-        var intent = Intent(Intent.ACTION_WEB_SEARCH);
-        intent.putExtra(SearchManager.QUERY, keyword);
-
-        startActivity(intent);
-    }
-
     private fun sendMessage()
     {
         val fullName = binding.editTextFullName.text.toString();
@@ -66,10 +56,6 @@ class FirstFragment : Fragment() {
 
         binding.btnSendMsg.setOnClickListener {
              sendMessage();
-        }
-
-        binding.btnSearch.setOnClickListener {
-            searchInternet();
         }
     }
 
