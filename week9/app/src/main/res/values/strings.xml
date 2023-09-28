@@ -11,4 +11,8 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="saved_file_content">Saved file content</string>
     <string name="save">Save</string>
+    <string name="title">Title</string>
+    <string name="subtitle">Subtitle</string>
+    <string name="add">Add</string>
+    <string name="remove">Remove</string>
 </resources>

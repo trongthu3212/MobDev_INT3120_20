@@ -1,5 +1,6 @@
 package com.uetmbc.myapplication
 
+import android.content.ContentValues
 import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -90,15 +91,31 @@ class FirstFragment : Fragment() {
             saveFileContent(binding.etContent.text.toString());
         }
 
-        /*
         databaseHelper = FeedReaderDbHelper(context);
-        binding.rvDbList.adapter = SimpleCursorAdapter(
+        var adapter = SimpleCursorAdapter(
             context,
             R.layout.list_view_item,
-            databaseHelper?.readableDatabase?.query(FeedReaderContract.FeedEntry.TABLE_NAME, arrayOf("*"), null, null, null, null, null),
+            databaseHelper?.readableDatabase?.query(FeedReaderContract.FeedEntry.TABLE_NAME, arrayOf("_id", "title", "subtitle"), null, null, null, null, null),
                 arrayOf("_id", "title", "subtitle"),
                 IntArray(3) { R.id.tvId; R.id.tvTitle; R.id.tvSubtitle }
-        )*/
+        )
+
+        binding.rvDbList.adapter = adapter;
+
+        binding.btnAddDb.setOnClickListener {
+            var db = databaseHelper!!.writableDatabase;
+            db.beginTransaction();
+
+            var values = ContentValues()
+            values.put(FeedReaderContract.FeedEntry.COLUMN_NAME_TITLE, binding.etTitle.text.toString());
+            values.put(FeedReaderContract.FeedEntry.COLUMN_NAME_SUBTITLE, binding.etSubtitle.text.toString());
+
+            db.insert(FeedReaderContract.FeedEntry.TABLE_NAME, null, values);
+            db.setTransactionSuccessful();
+            db.endTransaction();
+
+            binding.rvDbList.adapter = adapter;
+        }
 
         updateSilentModeStatus();
     }

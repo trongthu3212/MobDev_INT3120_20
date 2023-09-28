@@ -13,11 +13,16 @@ class FeedReaderDbHelper(context: Context?) :
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        db?.execSQL("CREATE TABLE IF NOT EXISTS " + FeedEntry.TABLE_NAME + " (_id INTEGER PRIMARY KEY AUTOINCREMENT, test TEXT)")
+        db?.execSQL(SQL_CREATE_ENTRIES_UPGRADE);
     }
 
     companion object {
         private val SQL_CREATE_ENTRIES = "CREATE TABLE " + FeedEntry.TABLE_NAME + " (" +
+                FeedEntry.COLUMN_NAME_ID + " INTEGER PRIMARY KEY," +
+                FeedEntry.COLUMN_NAME_TITLE + " TEXT," +
+                FeedEntry.COLUMN_NAME_SUBTITLE + " TEXT)"
+
+        private val SQL_CREATE_ENTRIES_UPGRADE = "CREATE TABLE IF NOT EXISTS" + FeedEntry.TABLE_NAME + " (" +
                 FeedEntry.COLUMN_NAME_ID + " INTEGER PRIMARY KEY," +
                 FeedEntry.COLUMN_NAME_TITLE + " TEXT," +
                 FeedEntry.COLUMN_NAME_SUBTITLE + " TEXT)"
