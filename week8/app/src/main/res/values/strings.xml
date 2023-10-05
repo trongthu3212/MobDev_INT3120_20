@@ -19,4 +19,8 @@
     <string name="message_sent_from">Message sent from MainActivity:</string>
     <string name="message_empty">((Message))</string>
     <string name="hello_msg">Hello, please say hello to me</string>
+
+    <string name="feedback_received">Mysterious feedback received: </string>
+    <string name="search_target">Search target: </string>
+    <string name="search">Search</string>
 </resources>

@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -50,7 +51,11 @@ class NextFragment : Fragment(), MessageListener {
         binding.textView2.setText(this.message);
 
         receiver = MyBroadcastReceiver(this);
+
+        /*
         context?.registerReceiver(receiver, IntentFilter("com.example.ACTION_MY_EVENT"));
+
+        Log.i("APPTEST", "Register receiver!");*/
 
         var testIntent = Intent("com.example.ACTION_MY_EVENT");
         testIntent.putExtra("message", "This is a test message! From feedback sender");
@@ -58,11 +63,28 @@ class NextFragment : Fragment(), MessageListener {
         context?.sendBroadcast(testIntent);
     }
 
+    override fun onPause() {
+        super.onPause()
+
+        context?.unregisterReceiver(receiver)
+        Log.i("APPTEST", "Unregister receiver on pause!");
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        context?.registerReceiver(receiver, IntentFilter("com.example.ACTION_MY_EVENT"))
+        Log.i("APPTEST", "Register receiver on resume!");
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
 
         _binding = null
+
+        /*
         context?.unregisterReceiver(receiver)
+        Log.i("APPTEST", "Unregister receiver!");*/
     }
 
     override fun OnMessageIncoming(message: String) {

@@ -15,4 +15,5 @@
     <string name="subtitle">Subtitle</string>
     <string name="add">Add</string>
     <string name="remove">Remove</string>
+    <string name="change_file_name">Change file name</string>
 </resources>
