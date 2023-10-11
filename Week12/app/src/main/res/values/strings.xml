@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Week12</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="have_magnetic_info">Have magnetic info</string>
+    <string name="no_magnetic_info">Does not have magnetic info</string>
+    <string name="register_listener">Register listener</string>
+    <string name="unregister_listener">Unregister listener</string>
+    <string name="magnetic_field_value">Magnetic fields value: (%.2f, %.2f, %.2f)</string>
+    <string name="magnetic_accuracy">Magnetic accuracy changed!</string>
+    <string name="to_menu">To menu</string>
+
+    <string name="connect_using_wifi">Connecting through wifi</string>
+    <string name="connect_using_mobile">Connecting through celluar</string>
+    <string name="connect_using_vpn">Connecting through VPN</string>
+    <string name="enter_phone_number">Enter phone number</string>
+    <string name="open_call">Call</string>
+    <string name="send_sms">Send SMS</string>
+
+    <string name="button_sensor">Sensor</string>
+    <string name="button_wifi">Wifi</string>
+    <string name="button_phone_sms">Phone/SMS</string>
+</resources>

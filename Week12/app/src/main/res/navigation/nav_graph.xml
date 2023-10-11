@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigationFragment">
+
+    <fragment
+        android:id="@+id/SensorFragment"
+        android:name="com.uetmbc.week12.SensorFragment"
+        android:label="@string/button_sensor"
+        tools:layout="@layout/fragment_sensor">
+        <action
+            android:id="@+id/action_SensorFragment_to_navigationFragment"
+            app:destination="@id/navigationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/WifiFragment"
+        android:name="com.uetmbc.week12.WifiFragment"
+        android:label="@string/button_wifi"
+        tools:layout="@layout/fragment_wifi">
+        <action
+            android:id="@+id/action_WifiFragment_to_navigationFragment"
+            app:destination="@id/navigationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigationFragment"
+        android:name="com.uetmbc.week12.NavigationFragment"
+        android:label="fragment_navigation"
+        tools:layout="@layout/fragment_navigation">
+        <action
+            android:id="@+id/action_navigationFragment_to_SensorFragment"
+            app:destination="@id/SensorFragment" />
+        <action
+            android:id="@+id/action_navigationFragment_to_WifiFragment"
+            app:destination="@id/WifiFragment" />
+        <action
+            android:id="@+id/action_navigationFragment_to_phoneSmsFragment"
+            app:destination="@id/phoneSmsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/phoneSmsFragment"
+        android:name="com.uetmbc.week12.PhoneSmsFragment"
+        android:label="fragment_phone_sms"
+        tools:layout="@layout/fragment_phone_sms">
+        <action
+            android:id="@+id/action_phoneSmsFragment_to_navigationFragment"
+            app:destination="@id/navigationFragment" />
+    </fragment>
+</navigation>
